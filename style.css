@@ -6,6 +6,9 @@
 body {
 	background-image: url(imgs/pexels-pixabay-65210.jpg);
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 .list {
