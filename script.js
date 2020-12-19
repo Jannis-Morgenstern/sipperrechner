@@ -2,12 +2,13 @@
 const inputElement = document.querySelector('#treffer');
 const formElement = document.querySelector('#trefferform');
 const schluckeContainer = document.querySelector('#schluckeContainer');
-
+const button = document.querySelector('#addone');
 // Neues DOM Element wird erstellt
 const schluckeElement = document.createElement('p');
 
 // Globale Anzahl der Schlucke
 let schlucke = 0;
+let treffer = 0;
 
 // Logik für den Schluckerechner
 const sipperrechner = trefferAnz => {
@@ -25,7 +26,14 @@ const sipperrechner = trefferAnz => {
 
 // Funktion, die beim input change event ausgeführt wird
 const changeHandler = event => {
-	schlucke = sipperrechner(Number(event.target.value));
+	treffer = Number(event.target.value);
+	schlucke = sipperrechner(treffer);
+};
+
+const addHandler = () => {
+	treffer++;
+	schlucke = sipperrechner(treffer);
+	inputElement.value = treffer;
 };
 
 // Funktion, die beim form submit event ausgeführt wird
@@ -48,3 +56,5 @@ inputElement.addEventListener('change', changeHandler);
 
 // Register submit event listener für form element
 formElement.addEventListener('submit', submitHandler);
+
+button.addEventListener('click', addHandler);
