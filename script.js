@@ -28,6 +28,7 @@ const sipperrechner = trefferAnz => {
 const changeHandler = event => {
 	treffer = Number(event.target.value);
 	schlucke = sipperrechner(treffer);
+	inputElement.value = treffer;
 };
 
 const addHandler = () => {
