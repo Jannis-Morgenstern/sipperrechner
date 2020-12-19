@@ -32,15 +32,14 @@ body {
 	border-color: black;
 	text-decoration: none;
 	text-align: center;
-
+	border-color: rgba(0, 0, 0, 0);
 	color: black;
 	font-size: 25px;
 }
 .list .link:hover {
-	background-color: rgba(119, 136, 153, 0.288);
+	background-color: rgb(119, 136, 153);
 	color: rgb(201, 50, 163);
-	border-style: solid;
-	border-color: black;
+	border-color: rgba(0, 0, 0, 0);
 	border-radius: 6px;
 }
 #trefferform {
