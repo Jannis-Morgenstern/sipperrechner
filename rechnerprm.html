@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script defer src="script.js"></script>
+    <script defer src="prm.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="imgs/beer-solid.svg" />
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
           <a class="list link" href="index.html"> Home </a>
         </li>
         <li class="list item">
-          <a class="list link" href="rechnerprm.html">Promille<br />rechner</a>
+          <a class="list link" href="rechner1.html">Rechner1</a>
         </li>
         <li class="list item"><a class="list link" href="#">Rechner3</a></li>
         <li class="list item"><a class="list link" href="#">Rechner4</a></li>
@@ -24,13 +24,21 @@
     </nav>
 
     <div class="rechner">
-      <form id="trefferform">
-        <label class="formlabel" for="treffer">Treffer</label> <br />
-        <input autocomplete="off" type="text" id="treffer" />
-        <button type="button" id="addone">+</button>
-        <button type="submit">Submit</button>
+      <form id="prmform">
+        <div class="labelnfield">
+          <label class="formlabel" for="amount">Menge in ml</label>
+          <input type="text" name="amount" id="amount" />
+        </div>
+        <div class="labelnfield">
+          <label class="formlabel" for="prz">Alkoholgehalt</label>
+          <input type="text" name="prozent" id="prz" />
+        </div>
+        <div class="labelnfield">
+          <label class="formlabel" for="gewicht">Gewicht in kg</label>
+          <input type="text" name="gewicht" id="gewicht" />
+        </div>
+        <input type="submit" , name="submit" , id="submit" />
       </form>
-
       <div class="schluckeContainer"></div>
     </div>
   </body>
